@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -12,11 +12,11 @@
 
     <ItemGroup>
       <Folder Include="Extensions" />
-      <Folder Include="新しいフォルダー\" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="System.Data.SQLite.Core" Version="1.0.115.5" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
       <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="6.0.0" />
     </ItemGroup>
 

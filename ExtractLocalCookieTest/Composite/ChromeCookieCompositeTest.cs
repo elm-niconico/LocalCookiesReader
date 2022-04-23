@@ -1,8 +1,5 @@
-﻿using System;
-using System.Runtime.Versioning;
-using ExtractLocalCookie.Composite;
+﻿using System.Runtime.Versioning;
 using ExtractLocalCookie.EncryptedKey;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace ExtractLocalCookieTest.Composite;
@@ -16,14 +13,5 @@ public class ChromeCookieCompositeTest
     public ChromeCookieCompositeTest(ITestOutputHelper testOutputHelper)
     {
         _out = testOutputHelper;
-    }
-
-    [Fact]
-    public void ShouldLength32()
-    {
-        var unProtect = new ChromeCookieComposite().CompositeEncryptedKey(key);
-
-
-        Assert.Equal(32, Buffer.ByteLength(unProtect));
     }
 }

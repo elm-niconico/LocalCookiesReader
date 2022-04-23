@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractLocalCookie", "ExtractLocalCookie\ExtractLocalCookie.csproj", "{EA0BED46-E266-4568-AA5C-B92F7256C658}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractLocalCookie", "ExtractLocalCookie\ExtractLocalCookie.csproj", "{EA0BED46-E266-4568-AA5C-B92F7256C658}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractLocalCookieTest", "ExtractLocalCookieTest\ExtractLocalCookieTest.csproj", "{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractLocalCookieTest", "ExtractLocalCookieTest\ExtractLocalCookieTest.csproj", "{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{894539B8-530E-4DA3-9632-0C318ADE1B87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894539B8-530E-4DA3-9632-0C318ADE1B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894539B8-530E-4DA3-9632-0C318ADE1B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894539B8-530E-4DA3-9632-0C318ADE1B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894539B8-530E-4DA3-9632-0C318ADE1B87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {496A5158-F9DB-4656-BA4B-751EB780F59A}
 	EndGlobalSection
 EndGlobal
