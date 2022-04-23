@@ -15,7 +15,7 @@ var cookies = await reader
 var cookie = cookies.First();
 ```
 
-CookieDataModelは次のように宣言されています
+CookieDataModelは次のように宣言されています(未定義メンバーいくつかあります)
 
 ```c#
 public class CookieDataModel
