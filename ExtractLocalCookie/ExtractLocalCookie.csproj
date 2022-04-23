@@ -7,11 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="EncryptedKey" />
+      <Compile Remove="Class1.cs" />
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="Class1.cs" />
+      <Folder Include="Extensions" />
+      <Folder Include="新しいフォルダー\" />
     </ItemGroup>
 
 </Project>

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractLocalCookie", "ExtractLocalCookie\ExtractLocalCookie.csproj", "{EA0BED46-E266-4568-AA5C-B92F7256C658}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractLocalCookieTest", "ExtractLocalCookieTest\ExtractLocalCookieTest.csproj", "{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{EA0BED46-E266-4568-AA5C-B92F7256C658}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0BED46-E266-4568-AA5C-B92F7256C658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0BED46-E266-4568-AA5C-B92F7256C658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
