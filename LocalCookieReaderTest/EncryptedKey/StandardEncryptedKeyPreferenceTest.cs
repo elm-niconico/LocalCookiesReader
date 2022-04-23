@@ -1,4 +1,4 @@
-﻿using LocalCookieReader.Cookie.Chrome.EncryptedKey;
+﻿using LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey;
 using Xunit;
 
 namespace LocalCookieReaderTest.EncryptedKey;
@@ -9,7 +9,7 @@ public class StandardEncryptedKeyPreferenceTest
     public void ShouldGetEncryptedKey()
     {
         var pre = new StandardEncryptedKeyPreference();
-        var key = pre.ExtractEncryptedKey();
+        var key = pre.Fetch();
         Assert.NotNull(key);
     }
 }

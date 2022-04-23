@@ -1,6 +1,6 @@
 ﻿using LocalCookieReader.Exceptions;
 
-namespace LocalCookieReader.Cookie.Chrome.EncryptedKey;
+namespace LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey;
 
 /// <summary>
 ///     Windows版ChromeのCookiesファイルを複合するための鍵を取得します
@@ -20,5 +20,5 @@ public interface IEncryptedKeyPreference
     /// </summary>
     /// <returns>暗号化された鍵</returns>
     /// <exception cref="FailedExtractEncryptedKeyException">キーの取得に失敗した場合</exception>
-    public string ExtractEncryptedKey();
+    public string Fetch();
 }

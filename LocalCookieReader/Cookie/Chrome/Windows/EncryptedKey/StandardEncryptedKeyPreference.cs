@@ -1,13 +1,13 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
-using LocalCookieReader.Cookie.Chrome.EncryptedKey.JsonDataModel;
+using LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey.JsonDataModel;
 using LocalCookieReader.Exceptions;
 using LocalCookieReader.Util;
 
 [assembly: InternalsVisibleTo(ProjectName.Name)]
 
-namespace LocalCookieReader.Cookie.Chrome.EncryptedKey;
+namespace LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey;
 
 internal class StandardEncryptedKeyPreference : IEncryptedKeyPreference
 {
@@ -18,7 +18,7 @@ internal class StandardEncryptedKeyPreference : IEncryptedKeyPreference
         return data?.OsCrypt?.EncryptedKey ?? throw new FailedExtractEncryptedKeyException("ファイルから複合鍵が見つかりませんでした");
     }
 
-    public string ExtractEncryptedKey()
+    public string Fetch()
     {
         return ExtractEncryptedKey(PathHelper.DefaultLocalState);
     }

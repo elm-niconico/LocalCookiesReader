@@ -2,7 +2,7 @@
 
 public interface ICookiesReader
 {
-    public IEnumerable<CookieDataModel> GetCookies(string cookiesPath);
+    public Task<IEnumerable<CookieDataModel>> FetchCookiesAsync(string cookiesUri);
 }
 
 public class CookieDataModel

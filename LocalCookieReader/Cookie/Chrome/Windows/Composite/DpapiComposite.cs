@@ -6,20 +6,19 @@ using static System.Security.Cryptography.ProtectedData;
 
 [assembly: InternalsVisibleTo(ProjectName.Name)]
 
-namespace LocalCookieReader.Cookie.Chrome.Composite;
+namespace LocalCookieReader.Cookie.Chrome.Windows.Composite;
 
 [SupportedOSPlatform("windows")]
-internal class ChromeCookieComposite : IComposite
+internal class DpapiComposite : IComposite
 {
-    public byte[] CompositeEncryptedKey(string key)
+    public byte[] Composite(string key)
     {
         //先頭5byteはプレフィックスのため、不必要
-        var decode = Convert.FromBase64String(key)
+        var decode = Convert
+            .FromBase64String(key)
             .Skip(5)
             .ToArray();
 
-        var unProtect =
-            Unprotect(decode, null, DataProtectionScope.CurrentUser);
-        return unProtect;
+        return Unprotect(decode, null, DataProtectionScope.CurrentUser);
     }
 }
