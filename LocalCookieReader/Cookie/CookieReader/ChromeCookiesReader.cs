@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using LocalCookieReader.Cookie.Chrome.Windows.Fetcher;
+using LocalCookieReader.Cookie.Chrome.Composite;
+using LocalCookieReader.Cookie.Chrome.EncryptedKey;
+using LocalCookieReader.Cookie.Chrome.Fetcher;
 using LocalCookieReader.Util;
 
 [assembly: InternalsVisibleTo(ProjectName.Name)]
@@ -9,13 +10,20 @@ namespace LocalCookieReader.Cookie.CookieReader;
 
 internal class ChromeCookiesReader : ICookiesReader
 {
-    public async Task<IEnumerable<CookieDataModel>> FetchCookiesAsync(string cookiesUri)
+    ///
+    public async Task<IEnumerable<CookieDataModel>> FetchCookiesAsync(string cookiesUri, string? localStatePath = null)
     {
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            return await CookiesFetcherFactory
-                .Fact(FetchCookiesType.SqLite3)
-                .FetchAsync(cookiesUri);
+        string Decrypt(byte[] encryptedValue)
+        {
+            var key = EncryptedKeyFetcherFactory
+                .Fact(FetchEncryptedKeyType.Standard)
+                .Fetch(localStatePath);
 
-        throw new NotImplementedException();
+            return AesHelper.Decrypt(key, CompositeFactory.Fact(CompositeType.DpApi).Composite, encryptedValue);
+        }
+
+        return await CookiesFetcherFactory
+            .Fact(FetchCookiesType.SqLite3)
+            .FetchAsync(cookiesUri, Decrypt);
     }
 }

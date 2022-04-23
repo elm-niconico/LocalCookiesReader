@@ -1,4 +1,4 @@
-﻿namespace LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey;
+﻿namespace LocalCookieReader.Cookie.Chrome.EncryptedKey;
 
 internal enum FetchEncryptedKeyType
 {

@@ -1,4 +1,4 @@
-﻿namespace LocalCookieReader.Cookie.Chrome.Windows.Composite;
+﻿namespace LocalCookieReader.Cookie.Chrome.Composite;
 
 internal interface IComposite
 {

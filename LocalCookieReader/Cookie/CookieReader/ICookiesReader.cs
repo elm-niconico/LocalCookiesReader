@@ -2,7 +2,13 @@
 
 public interface ICookiesReader
 {
-    public Task<IEnumerable<CookieDataModel>> FetchCookiesAsync(string cookiesUri);
+    /// <summary>
+    ///     指定したクッキーファイルからクッキー情報を取得します
+    /// </summary>
+    /// <param name="cookiesUri">クッキーファイルのパス</param>
+    /// <param name="localStatePath">暗号化されたデータの復号に必要となるファイルのパス　指定しない場合デフォルトのパスになります。</param>
+    /// <returns></returns>
+    public Task<IEnumerable<CookieDataModel>> FetchCookiesAsync(string cookiesUri, string? localStatePath = null);
 }
 
 public class CookieDataModel

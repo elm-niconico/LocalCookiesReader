@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey.JsonDataModel;
+namespace LocalCookieReader.Cookie.Chrome.EncryptedKey.JsonDataModel;
 
 [Serializable]
 internal class EncryptedKeyData

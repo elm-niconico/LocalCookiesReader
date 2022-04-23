@@ -1,4 +1,4 @@
-﻿namespace LocalCookieReader.Cookie.Chrome.Windows.Fetcher.Table;
+﻿namespace LocalCookieReader.Cookie.Chrome.Fetcher.Table;
 
 public class CookieTable
 {

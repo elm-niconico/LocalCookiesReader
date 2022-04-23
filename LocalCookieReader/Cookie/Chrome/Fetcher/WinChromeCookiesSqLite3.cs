@@ -1,23 +1,17 @@
 ﻿using System.Data;
 using System.Data.SQLite;
 using System.Runtime.CompilerServices;
-using System.Runtime.Versioning;
-using System.Security.Cryptography;
-using System.Text;
-using LocalCookieReader.Cookie.Chrome.Windows.Composite;
-using LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey;
 using LocalCookieReader.Cookie.CookieReader;
 using LocalCookieReader.Util;
 
 [assembly: InternalsVisibleTo(ProjectName.Name)]
 
-namespace LocalCookieReader.Cookie.Chrome.Windows.Fetcher;
+namespace LocalCookieReader.Cookie.Chrome.Fetcher;
 
-[SupportedOSPlatform("Windows")]
 // めっちゃ処理ながくなったーー
 internal class WinChromeCookiesSqLite3 : ICookiesFetcher
 {
-    public async Task<IEnumerable<CookieDataModel>> FetchAsync(string cookiesUrl)
+    public async Task<IEnumerable<CookieDataModel>> FetchAsync(string cookiesUrl, Func<byte[], string> decrypt)
     {
         var sqlConnectionSb = new SQLiteConnectionStringBuilder
         {
@@ -48,39 +42,12 @@ internal class WinChromeCookiesSqLite3 : ICookiesFetcher
                 HasExpires = ToBool(reader, "has_expires"),
                 IsPersistent = ToBool(reader, "is_persistent"),
                 Priority = ToLong(reader, "priority"),
-                EncryptedValue = Decrypt(FetchEncryptedKeyType.Standard, (byte[]) reader["encrypted_value"])
+                EncryptedValue = decrypt((byte[]) reader["encrypted_value"])
             });
 
         return list;
     }
 
-
-    private static string Decrypt(FetchEncryptedKeyType fetchKey, byte[] value)
-    {
-        var key = EncryptedKeyFetcherFactory
-            .Fact(fetchKey)
-            .Fetch();
-
-        var keyBytes = CompositeFactory
-            .Fact(CompositeType.DpApi)
-            .Composite(key);
-
-        return Encoding.UTF8.GetString(DecryptToBytes(keyBytes, value));
-    }
-
-
-    private static byte[] DecryptToBytes(byte[] keyBytes, byte[] value)
-    {
-        var cypher = value.Skip(15).SkipLast(16).ToArray();
-
-        var gcm = new AesGcm(keyBytes);
-        var plain = new byte[cypher.Length];
-        var nonce = value.Skip(3).Take(12).ToArray();
-        var tag = value.TakeLast(16).ToArray();
-        gcm.Decrypt(nonce, cypher, tag, plain);
-
-        return plain;
-    }
 
     private static DateTime ToDate(IDataRecord reader, string name)
     {

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Versioning;
 
-namespace LocalCookieReader.Cookie.Chrome.Windows.Fetcher;
+namespace LocalCookieReader.Cookie.Chrome.Fetcher;
 
 public enum FetchCookiesType
 {

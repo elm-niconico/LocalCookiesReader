@@ -1,14 +1,12 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Runtime.Versioning;
 using System.Security.Cryptography;
 using LocalCookieReader.Util;
 using static System.Security.Cryptography.ProtectedData;
 
 [assembly: InternalsVisibleTo(ProjectName.Name)]
 
-namespace LocalCookieReader.Cookie.Chrome.Windows.Composite;
+namespace LocalCookieReader.Cookie.Chrome.Composite;
 
-[SupportedOSPlatform("windows")]
 internal class DpapiComposite : IComposite
 {
     public byte[] Composite(string key)
