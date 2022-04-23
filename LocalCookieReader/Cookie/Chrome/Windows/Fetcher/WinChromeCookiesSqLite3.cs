@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SQLite;
+using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 using System.Security.Cryptography;
 using System.Text;
@@ -8,11 +9,13 @@ using LocalCookieReader.Cookie.Chrome.Windows.EncryptedKey;
 using LocalCookieReader.Cookie.CookieReader;
 using LocalCookieReader.Util;
 
+[assembly: InternalsVisibleTo(ProjectName.Name)]
+
 namespace LocalCookieReader.Cookie.Chrome.Windows.Fetcher;
 
 [SupportedOSPlatform("Windows")]
 // めっちゃ処理ながくなったーー
-public class WinChromeCookiesSqLite3 : ICookiesFetcher
+internal class WinChromeCookiesSqLite3 : ICookiesFetcher
 {
     public async Task<IEnumerable<CookieDataModel>> FetchAsync(string cookiesUrl)
     {
