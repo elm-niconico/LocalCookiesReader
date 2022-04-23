@@ -9,10 +9,10 @@
 var cookiesPath = "";
 
 var reader = CookieReaderFactory.Fact(BrowserType.Chrome);
-IEnumerable<CookieDataModel> cookies = reader.GetCookies(cookiesPath);
+var cookies = await reader
+    .FetchCookiesAsync(cookiesPath);
 
 var cookie = cookies.First();
-
 ```
 
 CookieDataModelは次のように宣言されています
