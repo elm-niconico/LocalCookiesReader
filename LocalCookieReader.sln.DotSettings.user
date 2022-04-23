@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3f74be2c_002D3e4c_002D4613_002Db8b1_002Da2ea4c6736d3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ShouldLength32" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E::net6.0::ExtractLocalCookieTest.Composite.ChromeCookieCompositeTest.ShouldLength32&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f049cf0b_002D205a_002D48b4_002D9c5a_002Dd940cf56e0e6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FilereadHelperTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::DE3BEDD4-851D-48A6-B6CB-5BA43B140E0E::net6.0::ExtractLocalCookieTest.Composite.ChromeCookieCompositeTest.ShouldLength32&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
